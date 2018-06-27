@@ -11,8 +11,8 @@ class Counter extends React.Component{
         <div>
         Clicked: {this.props.value} times
             <ul>
-                <li><Link to="/index/detail/1">一</Link></li>
-                <li><Link to="/index/detail/2">二</Link></li>
+                <li><Link to="/detail/1">一</Link></li>
+                <li><Link to="/detail/2">二</Link></li>
             </ul>
         </div>)
     }

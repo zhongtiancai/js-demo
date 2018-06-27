@@ -31,16 +31,24 @@ const AuthButton = withRouter(
 );
 
 class PrivateRoute extends React.Component{
-    render(){
-        return(
-            fakeAuth.isAuthenticated ? (
-              this.props.component
-            ) : (
-                <Redirect
-                    to="/login"
-                />
-        ));
-     }
+    render() {
+        const {component: Component, ...rest} = this.props
+        debugger;
+        return (
+            <Route
+                {...rest}
+                render={props =>
+                    fakeAuth.isAuthenticated ? (
+                        <Component {...props} />
+                    ) : (
+                        <Redirect
+                            to="/login"
+                        />
+                    )
+                }
+            />
+        );
+    }
 }
 
 export {fakeAuth,AuthButton,PrivateRoute}

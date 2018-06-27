@@ -2,6 +2,7 @@
 import React, { Component, PropTypes } from 'react'
 import {Link} from 'react-router-dom'
 
+
 class Default extends React.Component{
 
 
@@ -9,7 +10,7 @@ class Default extends React.Component{
         return(
         <div>
           default
-            <Link to={'/index/hello'}>跳转</Link>
+            <Link to={'/hello'}>跳转</Link>
         </div>)
     }
 }

@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import Frame from './Frame'
 import Login from './Login'
 import { Route,HashRouter,Switch } from 'react-router-dom';
-
+import {PrivateRoute} from './PrivateRoute'
 
 
 function render() {
@@ -13,7 +13,7 @@ function render() {
       <HashRouter>
           <Switch>
               <Route path="/login" component={Login}/>
-              <Route path="/index" component={Frame}/>
+              <Route path="/" component={Frame}/>
 
           </Switch>
       </HashRouter>,
